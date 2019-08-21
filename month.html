@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello</title>
+    <style>
+        #txtMonth {
+            border: 2px solid aquamarine;
+        }
+    </style>
+</head>
+<body>
+<form>
+    Month:
+    <input id="txtMonth" type="text"/>
+    <button type="button" onclick="calculate()">Convert</button>
+    <label name="lblResult"></label>
+</form>
+<script>
+    function calculate() {
+        let a = parseInt(document.getElementById("txtMonth").value);
+
+
+        switch (a) {
+            case 0:
+                alert("0 days!");
+                break;
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                alert(a + " has 31 days!");
+                break;
+            case 2:
+                alert(a + " has either 28 or 29 days!");
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                alert(a + " has 30 days!");
+                break;
+
+        }
+    }
+</script>
+</body>
+</html>
